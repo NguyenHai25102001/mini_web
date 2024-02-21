@@ -7,6 +7,7 @@ import { AppContext } from "../../contexts/app.context";
 import Images from "../../static";
 import { checkBgIconObject } from "../../utils/checkBgIcon";
 import { dataStatic } from "../../constants/data";
+import {urldt} from "../../api";
 
 const ModalToy = React.forwardRef((props, ref) => {
   const [showModalToy, setShowModalToy] = React.useState(false);
@@ -46,7 +47,7 @@ const ModalToy = React.forwardRef((props, ref) => {
             dataToyByMonth.data.data.toy.map((item, index) => {
               var url = item.image;
               var newUrl = url.replace(
-                "giaphubaby.appdrbaby.com",
+                urldt,
                 "linokids.net"
               );
               const cateofToy =

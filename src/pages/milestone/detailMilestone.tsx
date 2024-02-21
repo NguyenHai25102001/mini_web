@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "./styles.css";
 import Utilities, { checkBgIconColor } from "../../utils/Utilities";
 import axios from "axios";
-import API from "../../api";
+import API, {urldt} from "../../api";
 import { checkBgIconObject } from "../../utils/checkBgIcon";
 import path from "../../constants/path";
 import { useNavigate } from "react-router-dom";
@@ -171,7 +171,7 @@ const DetailMilestones = ({
                               item2?.video?.map((action, actionIndex) => {
                                 var url = action?.detai_video?.image;
                                 var newUrl = url.replace(
-                                  "giaphubaby.appdrbaby.com",
+                                  urldt,
                                   "linokids.net"
                                 );
                                 return (

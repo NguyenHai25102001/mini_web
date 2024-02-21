@@ -27,6 +27,7 @@ import {
 import LessonDetailInfo from "./lessonDetailInfo";
 import ModalToy from "./modalToy";
 import LessonToy from "./lessonToy";
+import {urldt} from "../../api";
 
 const URL_VIDEO_DEFAULT =
   "https://linokids.net/storage/videos/0435666a902ebef0b8816c9a8dea094a863718.mp4";
@@ -71,7 +72,7 @@ const DetailLessonHome = () => {
       // @ts-ignore
       var url = data?.data?.data?.video;
       // @ts-ignore
-      var newVideo = url.replace("giaphubaby.appdrbaby.com", "linokids.net");
+      var newVideo = url.replace(urldt, "linokids.net");
       setVideoLink(newVideo);
       setSelectBtnTop(location.state.status);
       setIsLiked(

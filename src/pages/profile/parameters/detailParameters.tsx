@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { List, Modal, Page } from "zmp-ui";
 import { Swiper, SwiperSlide } from "swiper/react";
 import axios from "axios";
-import API from "../../../api";
+import API, {urldt} from "../../../api";
 import { checkBgIconObject } from "../../../utils/checkBgIcon";
 import Utilities, { checkBgIconColor } from "../../../utils/Utilities";
 import { checkIconByCatePara } from "./checkIconPara";
@@ -191,7 +191,7 @@ const DetailParameters = ({
                               item2?.video?.map((action, actionIndex) => {
                                 var url = action?.detai_video?.image;
                                 var newUrl = url.replace(
-                                  "giaphubaby.appdrbaby.com",
+                                  urldt,
                                   "linokids.net"
                                 );
                                 return (
