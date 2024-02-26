@@ -299,7 +299,7 @@ const Home = () => {
   }, [page]);
   React.useEffect(() => {
     setPage(1);
-    setListProblem([]);
+    // setListProblem([]);
   }, [selectedBaby]);
   React.useEffect(() => {
     getProblemListSelected();
@@ -389,30 +389,29 @@ const Home = () => {
           {id === 1
             ? "Vận động thô"
             : id === 2
-            ? "Vận động tinh"
-            : id === 3
-            ? "Ngôn ngữ"
-            : id === 4
-            ? " Tư duy IQ"
-            : id === 5
-            ? "Tự lập"
-            : id === 6
-            ? "Cảm xúc EQ"
-            : id === 7
-            ? "Giác quan"
-            : id === "height"
-            ? "Chiều cao"
-            : id === "weight"
-            ? "Cân nặng"
-            : ""}
+              ? "Vận động tinh"
+              : id === 3
+                ? "Ngôn ngữ"
+                : id === 4
+                  ? " Tư duy IQ"
+                  : id === 5
+                    ? "Tự lập"
+                    : id === 6
+                      ? "Cảm xúc EQ"
+                      : id === 7
+                        ? "Giác quan"
+                        : id === "height"
+                          ? "Chiều cao"
+                          : id === "weight"
+                            ? "Cân nặng"
+                            : ""}
         </p>
         <p
           className={`text-center text-[18px] font-extrabold 
-        ${
-          Number(roundedNumber(done / total)) < 1
-            ? "text-[#FC2727]"
-            : "text-[#14557a]"
-        }
+        ${Number(roundedNumber(done / total)) < 1
+              ? "text-[#FC2727]"
+              : "text-[#14557a]"
+            }
         `}
         >
           {total !== 0 ? `${roundedNumber((done / total) * 100)}%` : "0%"}
@@ -496,9 +495,9 @@ const Home = () => {
               <span className="text-sm text-white">Tổng điểm tích</span>
               <div className="flex items-center justify-center">
                 {!!dataPointHome &&
-                !!dataPointHome.data &&
-                !!dataPointHome.data.data &&
-                !!dataPointHome?.data?.data?.point ? (
+                  !!dataPointHome.data &&
+                  !!dataPointHome.data.data &&
+                  !!dataPointHome?.data?.data?.point ? (
                   <p className="text-xs font-bold text-[#ffc303] mr-1">
                     {formatDecimalNumber(dataPointHome?.data?.data?.point)}
                   </p>
