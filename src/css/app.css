@@ -56,3 +56,22 @@ div::-webkit-scrollbar {
   align-items: center;
   -webkit-overflow-scrolling: touch;
 }
+.right-\[22\%\]{
+  	   right: 0!important;
+       margin-right: 50% !important;
+       transform: translateX(50%);
+    
+     white-space:nowrap;
+  }
+
+  .right-\[28\%\]{
+right: 0 !important;
+margin-right: 50% !important;
+transform: translateX(50%);
+  }
+  .right-\[28\%\] .zaui-text {
+    display: inline !important;
+    
+}
+  
+  

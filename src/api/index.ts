@@ -1,4 +1,4 @@
-export const urldt="giaphubaby.appdrbaby.com"
+export const urldt="shopchipchip.appdrbaby.com"
 export const baseUrl = `https://${urldt}/`;
 const revo = "https://cms.temchonggia.com/backend/";
 const API = {
